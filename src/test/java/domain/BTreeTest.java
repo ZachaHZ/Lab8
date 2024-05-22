@@ -11,6 +11,7 @@ class BTreeTest {
         BTree bTree = new BTree();
         for(int i = 0; i < 10; i++){
             bTree.add(util.Utility.getRandom(50));
+
         }
 //        bTree.add(20);
 //        bTree.add(30);
