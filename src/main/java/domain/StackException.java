@@ -7,11 +7,12 @@ package domain;
 
 /**
  *
- * @author Profesor Gilberth Chaves A
+ * @author Profesor Lic. Gilberth Chaves A.
  */
-public class QueueException extends Exception{
+public class StackException extends Exception {
 
-    public QueueException(String message) {
+    //Constructor
+    public StackException(String message) {
         super(message);
     }
     

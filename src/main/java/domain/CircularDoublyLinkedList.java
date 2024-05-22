@@ -184,9 +184,9 @@ public class CircularDoublyLinkedList implements List{
         }
         for (int i = 1; i <= size() ; i++) {
             for (int j = i+1; j <= size() ; j++) {
-                Customer customerI = (Customer) getNode(i).data;
-                Customer customerJ = (Customer) getNode(j).data;
-                if(util.Utility.compare(customerJ.getName(), customerI.getName()) < 0){
+                Object obj = getNode(i).data;
+                Object obj2 =  getNode(j).data;
+                if(util.Utility.compare(obj2, obj) < 0){
                     Object aux = getNode(i).data;
                     getNode(i).data = getNode(j).data;
                     getNode(j).data = aux;
