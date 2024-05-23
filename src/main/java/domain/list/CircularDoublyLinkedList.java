@@ -1,6 +1,8 @@
 
 
-package domain;
+package domain.list;
+
+import domain.Node;
 
 public class CircularDoublyLinkedList implements List{
     private Node first; //apuntador al inicio de la lista

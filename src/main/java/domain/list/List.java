@@ -1,4 +1,6 @@
-package domain;
+package domain.list;
+
+import domain.Node;
 
 /**
  *

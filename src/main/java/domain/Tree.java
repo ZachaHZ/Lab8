@@ -54,6 +54,8 @@ public interface Tree {
     public String InOrder() throws TreeException;
     //private String InOrder(BTreeNode node)
 
+    String inOrder() throws TreeException;
+
     ////recorre el árbol de la forma: hijo izq-hijo der-nodo,
     //para mostrar todos los elementos existentes
     public String postOrder() throws TreeException;

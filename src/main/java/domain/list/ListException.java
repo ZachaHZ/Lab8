@@ -1,4 +1,4 @@
-package domain;
+package domain.list;
 
 public class ListException extends Exception {
 
