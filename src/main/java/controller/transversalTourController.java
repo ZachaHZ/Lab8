@@ -1,8 +1,8 @@
 package controller;
 
+import javafx.event.ActionEvent;
 import javafx.scene.layout.BorderPane;
 
-import java.awt.event.ActionEvent;
 
 public class transversalTourController {
     @javafx.fxml.FXML
