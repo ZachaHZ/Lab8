@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class BTreeTest {
 
     @Test
-    void Test() {
+    void Test() throws TreeException {
         BTree bTree = new BTree();
         for(int i = 0; i < 10; i++){
             bTree.add(util.Utility.getRandom(50));
@@ -42,6 +42,7 @@ class BTreeTest {
         }
         //TODO add the height(element) test
         //TODO add the lists, Stack & queue
+
 //        try {
 //            System.out.println(bTree.InOrder());
 //        } catch (TreeException e) {
