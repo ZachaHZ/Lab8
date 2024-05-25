@@ -99,48 +99,25 @@ public class BTree implements Tree {
             throw new TreeException("Binary Tree is empty");
         //root = remove(root,element);
     }
-    private BTreeNode remove(BTreeNode node, Object element){
-        if(node!=null){
-            if(util.Utility.compare(node.data, element)==0){
-                //Caso 1
-                if(node.left==null && node.right==null){
+    private BTreeNode remove(BTreeNode node, Object obj){
+        if(node!= null){
+            if(util.Utility.compare(node.data,obj)==0) {
+                if (node.left == null && node.right == null) {
                     return null;
-                }
-                //Caso 2. El nodo solo tiene un hijo
-                else if(node.left==null && node.right!=null){
-                    //node.right = newPath(node.right, node.path);
+                } else if (node.left==null && node.right!= null) {
                     return node.right;
-                }else if(node.left!=null && node.right==null){
-                    //node.left = newPath(node.left, node.path);
+                } else if (node.left!=null && node.right==null) {
                     return node.left;
-                }else
-                    //Caso 3. El nodo tiene 2 hijos
-                    if(node.left!=null && node.right!=null){
-                        Object value = getLeaf(node.right);
-                        node.data = value;
-                        node.right = removeLeaf(node.right, value);
-                    }
-
+                }
+                if (node.left!=null&&node.right!=null){
+                    Object value = getLeaf(node.right);
+                    node.data=value;
+                    node.right= removeLeaf(node.right,value);
+                    //TODO update the path
+                }
             }
         }
-        node.left = remove(node.left, element);
-        node.right = remove(node.right, element);
-        return node;
-    }
-
-    private BTreeNode newPath(BTreeNode node, String path){
-        //Actualizar la data y llamar recursivo a todos los hijos
-        //Nota Zacha: No se si esto esta bien
-        if(node!=null){
-            node.data = path;
-            if(node.left!=null){
-                newPath(node.left, path);
-            }
-            if(node.right!=null){
-                newPath(node.right, path);
-            }
-        }
-        return node;
+        return null; //TODO change this
     }
 
     private BTreeNode removeLeaf(BTreeNode node, Object value) {
@@ -168,6 +145,8 @@ public class BTree implements Tree {
             }
             return aux;
     }
+
+    //private BTreeNode remove(BTreeNode node, Object element)
 
     @Override
     public int height(Object element) throws TreeException {
