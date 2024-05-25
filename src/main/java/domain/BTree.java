@@ -271,6 +271,9 @@ public class BTree implements Tree {
         return result;
     }
 
+    public BTreeNode getRoot() {
+        return this.root;
+    }
 
     //preOrder: recorre el árbol de la forma: nodo-izq-der
     //inOrder: recorre el árbol de la forma: izq-nodo-der
